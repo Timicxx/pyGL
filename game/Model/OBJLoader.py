@@ -4,7 +4,7 @@ import numpy as np
 
 class OBJLoader:
     def __init__(self, model_name):
-        self.model_path = "F:\\GitHub\\pyGL\\game\\Assets\\res\\" + model_name + '.obj'
+        self.model_path = "F:\\Git Repos\\pyGL\\game\\Assets\\res\\" + model_name + '.obj'
         self.data = None
         self.load_model()
 

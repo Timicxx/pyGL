@@ -100,7 +100,7 @@ class MasterRenderer:
     def gen_texture(self, file):
         from PIL import Image
         import numpy as np
-        path = "F:\\GitHub\\pyGL\\game\\Assets\\res\\" + file + ".png"
+        path = "F:\\Git Repos\\pyGL\\game\\Assets\\res\\" + file + ".png"
         image = Image.open(path)
         tex = np.array(list(image.convert('RGBA').getdata()), np.uint8)
         size = [
@@ -116,10 +116,10 @@ class MasterRenderer:
     def gen_objects(self):
         objects = []
         tree_model = self.gen_model("tree", self.gen_texture("tree"), [0, 100])
-        #low_poly_tree_model = self.gen_model("lowPolyTree", self.gen_texture("lowPolyTree"), [0, 10])
-        #grass_model = self.gen_model("grassModel", self.gen_texture("grassTexture"), [0, 10])
-        #flower_model = self.gen_model("grassModel", self.gen_texture("flower"), [0, 10])
-        #fern_model = self.gen_model("fern", self.gen_texture("fern"), [0, 10])
+        low_poly_tree_model = self.gen_model("lowPolyTree", self.gen_texture("lowPolyTree"), [0, 10])
+        grass_model = self.gen_model("grassModel", self.gen_texture("grassTexture"), [0, 10])
+        flower_model = self.gen_model("grassModel", self.gen_texture("flower"), [0, 10])
+        fern_model = self.gen_model("fern", self.gen_texture("fern"), [0, 10])
 
         for i in range(0, 500):
             x = random.uniform(-800, 800)
@@ -131,47 +131,47 @@ class MasterRenderer:
                 [5, 5, 5]
             )
             objects.append(tree)
-            # x = random.uniform(-800, 800)
-            # z = random.uniform(-800, 800)
-            # tree = Thing(
-            #     low_poly_tree_model,
-            #     [x, 0, z],
-            #     0, 0, 0,
-            #     [1, 1, 1]
-            # )
-            # objects.append(tree)
-            # x = random.uniform(-800, 800)
-            # z = random.uniform(-800, 800)
-            # grass = Thing(
-            #     grass_model,
-            #     [x, 0, z],
-            #     0, 0, 0,
-            #     [1, 1, 1]
-            # )
-            # objects.append(grass)
-            # x = random.uniform(-800, 800)
-            # z = random.uniform(-800, 800)
-            # flower = Thing(
-            #     flower_model,
-            #     [x, 0, z],
-            #     0, 0, 0,
-            #     [1, 1, 1]
-            # )
-            # objects.append(flower)
-            # x = random.uniform(-800, 800)
-            # z = random.uniform(-800, 800)
-            # fern = Thing(
-            #     fern_model,
-            #     [x, 0, z],
-            #     0, 0, 0,
-            #     [1, 1, 1]
-            # )
-            # objects.append(fern)
-        #grass_model.has_transparency = True
-        #grass_model.fake_lightning = True
-        #flower_model.has_transparency = True
-        #flower_model.fake_lightning = True
-        #fern_model.has_transparency = True
+            x = random.uniform(-800, 800)
+            z = random.uniform(-800, 800)
+            tree = Thing(
+                low_poly_tree_model,
+                [x, 0, z],
+                0, 0, 0,
+                [1, 1, 1]
+            )
+            objects.append(tree)
+            x = random.uniform(-800, 800)
+            z = random.uniform(-800, 800)
+            grass = Thing(
+                grass_model,
+                [x, 0, z],
+                0, 0, 0,
+                [1, 1, 1]
+            )
+            objects.append(grass)
+            x = random.uniform(-800, 800)
+            z = random.uniform(-800, 800)
+            flower = Thing(
+                flower_model,
+                [x, 0, z],
+                0, 0, 0,
+                [1, 1, 1]
+            )
+            objects.append(flower)
+            x = random.uniform(-800, 800)
+            z = random.uniform(-800, 800)
+            fern = Thing(
+                fern_model,
+                [x, 0, z],
+                0, 0, 0,
+                [1, 1, 1]
+            )
+            objects.append(fern)
+        grass_model.has_transparency = True
+        grass_model.fake_lightning = True
+        flower_model.has_transparency = True
+        flower_model.fake_lightning = True
+        fern_model.has_transparency = True
 
         return objects
 

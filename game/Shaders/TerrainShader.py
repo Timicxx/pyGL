@@ -5,7 +5,7 @@ import numpy as np
 
 
 class TerrainShader:
-    def __init__(self, vert_file='F:\\GitHub\\pyGL\\game\\Assets\\shaders\\terrain.vert', frag_file='F:\\GitHub\\pyGL\\game\\Assets\\shaders\\terrain.frag'):
+    def __init__(self, vert_file='F:\\Git Repos\\pyGL\\game\\Assets\\shaders\\terrain.vert', frag_file='F:\\Git Repos\\pyGL\\game\\Assets\\shaders\\terrain.frag'):
         self.vert_file = vert_file
         self.frag_file = frag_file
         self.vertex_shader = None

@@ -5,7 +5,7 @@ import numpy as np
 
 
 class StaticShader:
-    def __init__(self, vert_file='F:\\GitHub\\pyGL\\game\\Assets\\shaders\\core.vert', frag_file='F:\\GitHub\\pyGL\\game\\Assets\\shaders\\core.frag'):
+    def __init__(self, vert_file='F:\\Git Repos\\pyGL\\game\\Assets\\shaders\\core.vert', frag_file='F:\\Git Repos\\pyGL\\game\\Assets\\shaders\\core.frag'):
         self.vert_file = vert_file
         self.frag_file = frag_file
         self.vertex_shader = None
