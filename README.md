@@ -18,3 +18,4 @@ python main.py
 *To do:*
 - Fix memory leak
 - Fix pyOpenGL issue that made the game broken
+- Remove venv, .idea, __pycache__
